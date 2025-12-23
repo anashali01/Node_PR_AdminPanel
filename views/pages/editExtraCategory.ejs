@@ -1,0 +1,117 @@
+<%- include('../partials/header') %>
+  <!-- ============================================================== -->
+  <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+  <!-- ============================================================== -->
+  <!-- ============================================================== -->
+  <!-- Page wrapper  -->
+  <!-- ============================================================== -->
+  <div class="page-wrapper bg-dark text-white" style="height: 100vh;">
+    <!-- ============================================================== -->
+    <!-- Bread crumb and right sidebar toggle -->
+    <!-- ============================================================== -->
+    <div class="page-breadcrumb">
+      <div class="row">
+        <div class="col-12 d-flex no-block align-items-center">
+          <h4 class="page-title">Form Basic</h4>
+          <div class="ms-auto text-end">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">
+                  Edit SubCategory
+                </li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Bread crumb and right sidebar toggle -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- Container fluid  -->
+    <!-- ============================================================== -->
+    <div class="container-fluid">
+      <!-- ============================================================== -->
+      <!-- Start Page Content -->
+      <!-- ============================================================== -->
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="form-container">
+            <form class="form" method="post" action="" enctype="multipart/form-data">
+              <label class="custum-file-upload" for="file" style="height: 250px; width: 100%;">
+                <div class="icon">
+                  <img src="/<%=Extracategory.image%>" alt="" style="height: 100px;">
+                </div>
+                <div class="text">
+                  <span>Click to upload image</span>
+                </div>
+                <input type="file" id="file" name="image">
+              </label>
+
+              <div class="form-group">
+                <label for="title">Name</label>
+                <input type="text" id="title" name="name" value="<%= Extracategory.name %>" required>
+              </div>
+
+            
+<div class="form-group">
+  <label for="title">Category</label>
+  <select name="category" class="form-select bg-dark text-white">
+    <option value="" disabled>-- Select Category --</option>
+    <% 
+      const currentCategoryId = (Extracategory && Extracategory.category)
+        ? Extracategory.category._id.toString()
+        : '';
+      categories.forEach(cat => {
+        const catId = cat._id.toString();
+    %>
+      <option value="<%= catId %>" <%= catId === currentCategoryId ? 'selected' : '' %>>
+        <%= cat.name %>
+      </option>
+    <% }) %>
+  </select>
+</div>
+
+<div class="form-group">
+  <label for="title">SubCategory</label>
+  <select name="Subcategory" class="form-select bg-dark text-white">
+    <option value="" disabled>-- Select Subcategory --</option>
+    <% 
+      const currentSubId = (Extracategory && Extracategory.Subcategory)
+        ? Extracategory.Subcategory._id.toString()
+        : '';
+      SubCategories.forEach(sub => {
+        const subId = sub._id.toString();
+    %>
+      <option value="<%= subId %>" <%= subId === currentSubId ? 'selected' : '' %>>
+        <%= sub.name %>
+      </option>
+    <% }) %>
+  </select>
+</div>
+              <button class="form-submit-btn w-100" type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+        <!-- editor -->
+
+        <!-- ============================================================== -->
+        <!-- End PAge Content -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Right sidebar -->
+        <!-- ============================================================== -->
+        <!-- .right-sidebar -->
+        <!-- ============================================================== -->
+        <!-- End Right sidebar -->
+        <!-- ============================================================== -->
+      </div>
+      <!-- ============================================================== -->
+      <!-- End Container fluid  -->
+      <!-- ============================================================== -->
+      <!-- ============================================================== -->
+      <!-- footer -->
+      <!-- ============================================================== -->
+      <%- include('../partials/footer') %>

@@ -1,0 +1,387 @@
+/* From Uiverse.io by gharsh11032000 */ 
+.form-container {
+  width: 600px;
+  background: linear-gradient(#212121, #212121) padding-box,
+              linear-gradient(145deg, transparent 35%,#e81cff, #40c9ff) border-box;
+  border: 2px solid transparent;
+  padding: 32px 24px;
+  font-size: 14px;
+  font-family: inherit;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-sizing: border-box;
+  border-radius: 16px;
+}
+
+.form-container button:active {
+  scale: 0.95;
+}
+
+.form-container .form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-container .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.form-container .form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #717171;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.form-container .form-group input {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  color: #fff;
+  font-family: inherit;
+  background-color: transparent;
+  border: 1px solid #414141;
+}
+
+.form-container .form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  resize: none;
+  color: #fff;
+  height: 96px;
+  border: 1px solid #414141;
+  background-color: transparent;
+  font-family: inherit;
+}
+
+.form-container .form-group input::placeholder {
+  opacity: 0.5;
+}
+
+.form-container .form-group input:focus {
+  outline: none;
+  border-color: #e81cff;
+}
+
+.form-container .form-group textarea:focus {
+  outline: none;
+  border-color: #e81cff;
+}
+
+.form-container .form-submit-btn {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  align-self: flex-start;
+  font-family: inherit;
+  color: #717171;
+  font-weight: 600;
+  width: 40%;
+  background: #313131;
+  border: 1px solid #414141;
+  padding: 12px 16px;
+  font-size: inherit;
+  gap: 8px;
+  margin-top: 8px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.form-container .form-submit-btn:hover {
+  background-color: #fff;
+  border-color: #fff;
+}
+
+.custum-file-upload {
+  height: 200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  gap: 20px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed #cacaca;
+  background-color: rgb(44, 43, 43);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0px 48px 35px -48px rgba(0,0,0,0.1);
+}
+
+.custum-file-upload .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custum-file-upload .icon svg {
+  height: 80px;
+  fill: rgb(249, 251, 252);
+}
+
+.custum-file-upload .text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custum-file-upload .text span {
+  font-weight: 400;
+  color: rgb(251, 251, 252);
+}
+
+.custum-file-upload input {
+  display: none;
+}
+
+
+.card1 {
+  --bg-card: #27272a;
+  --primary: #6d28d9;
+  --primary-800: #4c1d95;
+  --primary-shadow: #2e1065;
+  --light: #d9d9d9;
+  --zinc-800: #18181b;
+  --bg-linear: linear-gradient(0deg, var(--primary) 50%, var(--light) 125%);
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+
+  padding: 1rem;
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-card);
+
+  border-radius: 1rem;
+}
+
+.image_container {
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  height: 300px;
+  object-fit : cover;
+  object-position: center;
+  border-radius: 0.5rem;
+}
+
+
+
+.title {
+  overflow: clip;
+
+  width: 100%;
+
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--light);
+  text-transform: capitalize;
+  text-wrap: nowrap;
+  text-overflow: ellipsis;
+}
+
+.size {
+  font-size: 0.75rem;
+  color: var(--light);
+}
+
+.list-size {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+
+  margin-top: 0.25rem;
+}
+
+.list-size .item-list {
+  list-style: none;
+}
+
+.list-size .item-list-button {
+  cursor: pointer;
+
+  padding: 0.5rem;
+  background-color: var(--zinc-800);
+
+  font-size: 0.75rem;
+  color: var(--light);
+
+  border: 2px solid var(--zinc-800);
+  border-radius: 0.25rem;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.item-list-button:hover {
+  border: 2px solid var(--light);
+}
+.item-list-button:focus {
+  background-color: var(--primary);
+
+  border: 2px solid var(--primary-shadow);
+
+  box-shadow: inset 0px 1px 4px var(--primary-shadow);
+}
+
+.action {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--light);
+}
+
+
+
+#heart {
+  display: none;
+}
+
+.like-button {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  height: 48px;
+  width: 136px;
+  border-radius: 16px;
+  border: none;
+  background-color: #1d1d1d;
+  overflow: hidden;
+  box-shadow:
+    inset -2px -2px 5px rgba(255, 255, 255, 0.2),
+    inset 2px 2px 5px rgba(0, 0, 0, 0.1),
+    4px 4px 10px rgba(0, 0, 0, 0.4),
+    -2px -2px 8px rgba(255, 255, 255, 0.1);
+}
+
+ 
+.wrapper {
+  display: inline-flex;
+  list-style: none;
+  height: 80px;
+  width: 100%;
+  padding-top: 40px;
+  font-family: "Poppins", sans-serif;
+  justify-content: center;
+}
+
+.wrapper .icon {
+  position: relative;
+  background: #111;
+  border-radius: 50%;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background: #fff;
+  color: #000000;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #fff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+  background: #1877f2;
+  color: #fff;
+}
+
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+  background: #1da1f2;
+  color: #fff;
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+  background: #e4405f;
+  color: #fff;
+}
+
+ 
+.button1 {
+  padding: 1em 3em;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+button:hover {
+  background-color: #23c483;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+button:active {
+  transform: translateY(-1px);
+}

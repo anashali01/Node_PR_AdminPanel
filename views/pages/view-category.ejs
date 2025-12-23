@@ -1,0 +1,101 @@
+<%- include('../partials/header.ejs') %>
+  <!-- ============================================================== -->
+  <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+  <!-- ============================================================== -->
+  <!-- ============================================================== -->
+  <!-- Page wrapper  -->
+  <!-- ============================================================== -->
+  <div class="page-wrapper bg-dark text-white" style="height: 100vh;">
+    <!-- ============================================================== -->
+    <!-- Bread crumb and right sidebar toggle -->
+    <!-- ============================================================== -->
+    <div class="page-breadcrumb">
+      <div class="row">
+        <div class="col-12 d-flex no-block align-items-center">
+          <h4 class="page-title">Tables</h4>
+          <div class="ms-auto text-end">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb ">
+                <li class="breadcrumb-item "><a href="/" class="text-white">Home</a></li>
+                <li class="breadcrumb-item active text-white" aria-current="page">
+                  ViewCategory
+                </li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Bread crumb and right sidebar toggle -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- Container fluid  -->
+    <!-- ============================================================== -->
+    <div class="container-fluid">
+      <!-- ============================================================== -->
+      <!-- Start Page Content -->
+      <!-- ============================================================== -->
+      <div class="row">
+        <div class="col-12">
+          <div class="card bg-dark text-white">
+            <div class="card-body ">
+              <h5 class="card-title mb-0 text-white">Static Table</h5>
+            </div>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col" class="text-white">No.</th>
+                  <th scope="col" class="text-white">Image</th>
+                  <th scope="col" class="text-white">Name</th>
+                  <th scope="col" class="text-white">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <%categories.forEach((category,i)=>{ %>
+                  <tr>
+                    <td class="text-white"><%= i+1%></td>
+                    <td><img src="/<%= category.image%>" alt="<%= category.name%>" style="width: 100px;"></td>
+                    <td class="text-white"><%= category.name%></td>
+                    <td class="text-white">
+
+                      <%
+                      const isUsed = SubCategories.some((sub)=>
+                      sub.category && sub.category._id.toString() === category._id.toString()
+                      )
+                        
+                      %> 
+                      <% if(!isUsed){ %>
+                      <a href="/category/delete/<%= category._id%>" class="btn btn-danger">Delete</a>
+
+                      <%}else{ %> 
+                        <button class="btn btn-info text-white">Exist</button>
+                      <% }%>
+                      
+                      <a href="/category/edit/<%= category._id%>" class="btn btn-warning">Edit</a>
+                    </td>
+                  </tr>
+               <% }) %>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <!-- ============================================================== -->
+      <!-- End PAge Content -->
+      <!-- ============================================================== -->
+      <!-- ============================================================== -->
+      <!-- Right sidebar -->
+      <!-- ============================================================== -->
+      <!-- .right-sidebar -->
+      <!-- ============================================================== -->
+      <!-- End Right sidebar -->
+      <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Container fluid  -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- footer -->
+    <!-- ============================================================== -->
+    <%- include('../partials/footer.ejs') %>
