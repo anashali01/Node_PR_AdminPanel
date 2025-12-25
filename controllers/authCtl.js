@@ -139,7 +139,7 @@ const authCtl = {
               <td style="text-align:left;">
                 <h2 style="margin:0 0 8px;font-size:22px;color:#111827;">Email Verification</h2>
                 <p style="margin:0 0 16px;font-size:14px;color:#4b5563;">
-                  Use the One‑Time Password (OTP) below to complete your action on <strong>Zathu</strong>.
+                  Use the One‑Time Password (OTP) below to complete your action on <strong>Anash</strong>.
                 </p>
                 <p style="margin:0 0 24px;font-size:13px;color:#6b7280;">
                   This code is valid for the next <strong>10 minutes</strong>. Do not share it with anyone.
@@ -156,7 +156,7 @@ const authCtl = {
                 </p>
                 <p style="margin:0;font-size:13px;color:#9ca3af;">
                   Thanks,<br/>
-                  The Zathu Team
+                  The anash Team
                 </p>
               </td>
             </tr>
